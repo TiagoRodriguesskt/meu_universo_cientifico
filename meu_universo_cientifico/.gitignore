@@ -25,3 +25,15 @@ ENV/
 
 # Manim (arquivos de vídeo gerados)
 media/
+
+# Minhas chaves
+# uv
+.uv/
+
+# Backups e arquivos temporários
+*.bak
+*.tmp
+*.swp
+
+# Logs e diagnósticos
+*.log
