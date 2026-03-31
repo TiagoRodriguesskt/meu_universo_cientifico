@@ -1,12 +1,28 @@
 import importlib
 import sys
 import time
+from pathlib import Path
+
+# --- CONFIGURAÇÃO DE ACESSO AO MÓDULO KEYS ---
+# Define a raiz subindo um nível (de /tests para /)
+raiz = Path(__file__).resolve().parent.parent
+sys.path.append(str(raiz))
+
+try:
+    from keys.keys import MINHA_CHAVE, validar_conexao
+
+    if validar_conexao():
+        print(f"✅ Autenticado via módulo keys. Chave: {MINHA_CHAVE[:4]}...") # type: ignore
+    else:
+        print("⚠️ Módulo keys encontrado, mas chave não carregada (verifique o .env).")
+except Exception as e:
+    print(f"❌ Erro ao importar módulo de chaves: {e}")
 
 
+# --- FUNÇÃO DE TESTE DE MÓDULOS ---
 def test_module(module_name, description):
     try:
         start = time.time()
-        # Importação dinâmica para evitar que o script pare no primeiro erro
         mod = importlib.import_module(module_name)
         end = time.time()
         version = getattr(mod, "__version__", "N/A")
@@ -20,11 +36,11 @@ def test_module(module_name, description):
         return False
 
 
-print(f"--- DIAGNÓSTICO INTEGRAL DO MONOREPO ---")  # noqa: F541
+print("\n--- DIAGNÓSTICO INTEGRAL DO MONOREPO ---")
 print(f"Interpretador: {sys.executable}")
 print(f"Versão Python: {sys.version.split()[0]}\n")
 
-# Dicionário de Bibliotecas: {nome_do_modulo: "Descrição Amigável"}
+# Dicionário de Bibliotecas
 bibliotecas = {
     "numpy": "Cálculo Numérico (Numpy)",
     "scipy": "Matemática Avançada (SciPy)",
