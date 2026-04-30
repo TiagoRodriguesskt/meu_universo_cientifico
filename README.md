@@ -21,6 +21,29 @@ O projeto adota a estrutura de **Monorepo Virtual**, onde um único ambiente iso
 * **O Problema dos Três Corpos:** Simulação de sistemas caóticos e análise de estabilidade orbital usando integradores de passo adaptativo (`scipy.integrate`).
 * **Animações Matemáticas:** Visualização de conceitos complexos de cálculo e álgebra linear através do motor **Manim**.
 
+# Documentação Física do Simulador
+
+Abaixo estão as fórmulas utilizadas para calcular o impacto do objeto ao atingir o solo.
+
+### 1. Energia Cinética ($E_c$)
+Calcula a energia total acumulada pelo objeto devido ao seu movimento e massa.
+$$E_c = \frac{1}{2} m v^2$$
+
+### 2. Força de Impacto ($F$)
+Utiliza o **Teorema do Trabalho-Energia** para determinar a força média baseada na distância de parada ($d$) do material.
+$$F = \frac{E_c}{d}$$
+
+### 3. Impacto em Toneladas ($T$)
+Converte a força de Newtons para Tonelada-força ($tf$) usando a constante gravitacional padrão.
+$$T = \frac{F}{9806,65}$$
+
+---
+
+### Fórmula Unificada
+Para implementação direta no código:
+$$T = \frac{m \cdot v^2}{2 \cdot d \cdot 9806,65}$$
+
+
 ### 2. Computação Quântica
 * **Algoritmos de Bell:** Estudo de emaranhamento e superposição quântica.
 * **Simulação de Ruído:** Implementação de circuitos no **Qiskit Aer** para entender a decoerência em computadores quânticos reais.
