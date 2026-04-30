@@ -1,24 +1,28 @@
 """
 DocString: Queda Visual
 
-Objetivo: Simular a queda de um objeto em um solo.
-# FÓRMULA DO IMPACTO UTILIZADA:
-# Energia Cinética (Ec) = 0.5 * massa * velocidade²
-# Força (N) = Ec / distância_parada
-# Toneladas = Força / 9806.65
+# Documentação Física do Simulador
 
-# Cálculo unificado para Toneladas de Impacto
-tonelada_impacto = (0.5 * massa_kg * (velocidade**2)) / (distancia_parada * 9806.65)
+Abaixo estão as fórmulas utilizadas para calcular o impacto do objeto ao atingir o solo.
 
-# --- Processamento do Impacto ---
-# 1. Energia acumulada em Joules
-energia = 0.5 * massa_kg * (velocidade**2)
+### 1. Energia Cinética ($E_c$)
+Calcula a energia total acumulada pelo objeto devido ao seu movimento e massa.
+$$E_c = \frac{1}{2} m v^2$$
 
-# 2. Força baseada na distância que o solo "cede" (Trabalho)
-forca_newtons = energia / distancia_parada
+### 2. Força de Impacto ($F$)
+Utiliza o **Teorema do Trabalho-Energia** para determinar a força média baseada na distância de parada ($d$) do material.
+$$F = \frac{E_c}{d}$$
 
-# 3. Conversão final para exibição
-tonelada_impacto = forca_newtons / 9806.65
+### 3. Impacto em Toneladas ($T$)
+Converte a força de Newtons para Tonelada-força ($tf$) usando a constante gravitacional padrão.
+$$T = \frac{F}{9806,65}$$
+
+---
+
+### Fórmula Unificada
+Para implementação direta no código:
+$$T = \frac{m \cdot v^2}{2 \cdot d \cdot 9806,65}$$
+
 
 """
 
