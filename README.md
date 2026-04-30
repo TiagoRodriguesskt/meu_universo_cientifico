@@ -37,12 +37,13 @@ $$F = \frac{E_c}{d}$$
 Converte a força de Newtons para Tonelada-força ($tf$) usando a constante gravitacional padrão.
 $$T = \frac{F}{9806,65}$$
 
----
+
 
 ### Fórmula Unificada
 Para implementação direta no código:
 $$T = \frac{m \cdot v^2}{2 \cdot d \cdot 9806,65}$$
 
+---
 
 ### 2. Computação Quântica
 * **Algoritmos de Bell:** Estudo de emaranhamento e superposição quântica.
