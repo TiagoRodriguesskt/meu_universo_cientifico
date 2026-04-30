@@ -1,6 +1,9 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:venv",
     "python.analysis.extraPaths": [
-        "./meu_universo_cientifico/scripts"
+        ".",
+        "./automation/scripts",
+        "./meu_universo_cientifico/scripts",
+        "./meu_universo_cientifico/estaticos"
     ]
 }

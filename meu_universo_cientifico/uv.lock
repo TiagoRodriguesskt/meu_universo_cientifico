@@ -494,7 +494,7 @@ wheels = [
 [[package]]
 name = "meu-universo-cientifico"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "astropy" },
     { name = "biopython" },
@@ -1079,6 +1079,7 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/16/f8/c1216d3c85341e30d79c9ca27b2c27dba6ed0238c56e8b04ef568ea92c50/sgp4-2.25-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bfaddc20c4d6aa2e86119d13e3fd94a1d05e5bd17cb4fddb2ca5116842bc9228", size = 235203, upload-time = "2025-08-04T18:01:52.275Z" },
     { url = "https://files.pythonhosted.org/packages/52/c6/846a8039a0e8c5b653265e0248ee9836c75f420cfe99a65215a23f035595/sgp4-2.25-cp311-cp311-win32.whl", hash = "sha256:0ecd7d8833f83fe426d7926149665f4f23f4dab34b844e50876a1df88ee9aa7b", size = 161868, upload-time = "2025-08-04T18:01:53.256Z" },
     { url = "https://files.pythonhosted.org/packages/f9/ff/a74904468464d01dd52affb4b15ee1fe5ea804e5128a3f5f5f38c954765d/sgp4-2.25-cp311-cp311-win_amd64.whl", hash = "sha256:6b023f81fb20e62f8fa0b6f506201539ca8306779ef8565422bbf000f1e5a3dc", size = 164096, upload-time = "2025-08-04T18:01:54.264Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/47/8231e3d4a88341316ec8d0eb98d3a8a972477d8b038555259522735a8371/sgp4-2.25-py3-none-any.whl", hash = "sha256:4f39ecf6c2663109fed04adfe9982815ac83893271b521d92d5b186820f8c78e", size = 137376, upload-time = "2026-04-27T18:29:23.71Z" },
 ]
 
 [[package]]

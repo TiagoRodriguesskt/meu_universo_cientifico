@@ -31,8 +31,13 @@ dependencies = [
 [tool.uv]
 # Força o UV a ignorar subprojetos e focar apenas na raiz
 managed = true
-package = false
+package = true
 
+# Configurações do UV
 [tool.uv.workspace]
 # Deixamos vazio para evitar que o UV procure outros pyproject.toml dentro das pastas
 exclude = ["projects/*", "playground/*"]
+# Os códigos diretamente dentro da raiz do projeto
+[tool.setuptools]
+package-dir = {"" = "."}
+
