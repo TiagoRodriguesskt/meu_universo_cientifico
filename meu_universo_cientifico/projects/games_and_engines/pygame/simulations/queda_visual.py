@@ -6,9 +6,24 @@ Objetivo: Simular a queda de um objeto em um solo.
 # Energia Cinética (Ec) = 0.5 * massa * velocidade²
 # Força (N) = Ec / distância_parada
 # Toneladas = Força / 9806.65
+
+# Cálculo unificado para Toneladas de Impacto
+tonelada_impacto = (0.5 * massa_kg * (velocidade**2)) / (distancia_parada * 9806.65)
+
+# --- Processamento do Impacto ---
+# 1. Energia acumulada em Joules
+energia = 0.5 * massa_kg * (velocidade**2)
+
+# 2. Força baseada na distância que o solo "cede" (Trabalho)
+forca_newtons = energia / distancia_parada
+
+# 3. Conversão final para exibição
+tonelada_impacto = forca_newtons / 9806.65
+
 """
 
 import sys
+
 import pygame
 
 # --- CONFIGURAÇÃO E ENTRADA DE DADOS ---
