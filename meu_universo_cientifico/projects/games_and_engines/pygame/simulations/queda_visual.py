@@ -1,27 +1,31 @@
 """
 DocString: Queda Visual
+def calcular_tonelada_impacto(massa_kg, velocidade, distancia_parada):
 
-# Documentação Física do Simulador
+    Calcula a força de impacto convertida para toneladas.
 
-Abaixo estão as fórmulas utilizadas para calcular o impacto do objeto ao atingir o solo.
+    A lógica utiliza o Teorema do Trabalho e Energia:
 
-### 1. Energia Cinética ($E_c$)
-Calcula a energia total acumulada pelo objeto devido ao seu movimento e massa.
-$$E_c = \frac{1}{2} m v^2$$
+    1. Energia Cinética:
+    $$E_c = \\frac{1}{2} m v^2$$
 
-### 2. Força de Impacto ($F$)
-Utiliza o **Teorema do Trabalho-Energia** para determinar a força média baseada na distância de parada ($d$) do material.
-$$F = \frac{E_c}{d}$$
+    2. Força de Impacto:
+    $$F = \\frac{E_c}{d}$$
 
-### 3. Impacto em Toneladas ($T$)
-Converte a força de Newtons para Tonelada-força ($tf$) usando a constante gravitacional padrão.
-$$T = \frac{F}{9806,65}$$
+    3. Conversão para Toneladas:
+    $$T = \\frac{F}{9806.65}$$
 
----
+    Args:
+        massa_kg (float): Massa do objeto.
+        velocidade (float): Velocidade no momento do impacto (m/s).
+        distancia_parada (float): Distância de deformação/parada (m).
 
-### Fórmula Unificada
-Para implementação direta no código:
-$$T = \frac{m \cdot v^2}{2 \cdot d \cdot 9806,65}$$
+    Returns:
+        float: Impacto resultante em toneladas.
+
+    energia = 0.5 * massa_kg * (velocidade**2)
+    forca_n = energia / distancia_parada
+    return forca_n / 9806.65
 
 
 """
